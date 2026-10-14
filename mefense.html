@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="신성욱의 개인 프로젝트 MeFense. 수학 기반 전략 설계부터 WebGL 배포 문제 해결까지의 제작 과정을 소개합니다.">
+  <title>MeFense — 프로젝트 상세 | 신성욱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="detail-page">
+  <header class="detail-nav">
+    <a href="index.html#mefense">← 포트폴리오로 돌아가기</a>
+    <span>신성욱 / PROJECT 01</span>
+  </header>
+  <main class="detail-main">
+    <nav class="detail-project-switcher" aria-label="프로젝트 선택"><span>SELECT PROJECT</span><a href="mefense.html" aria-current="page">01 MeFense</a><a href="exit-from.html">02 EXIT_FROM</a><a href="not-a-cat.html">03 Not A Cat</a><a href="elevator.html">04 Elevator</a></nav>
+    <section class="detail-hero" aria-labelledby="detail-title">
+      <p class="eyebrow">MATH × DEFENSE · PERSONAL PROJECT</p>
+      <h1 id="detail-title">MeFense</h1>
+      <p class="detail-tagline">수학 자체가 전략이 되는 디펜스.</p>
+      <p class="project-lead">직접 전투하고, 포탑을 건설하고, 수식을 설계합니다. 수학(Math)과 디펜스(Defense)를 결합한 3D FPS 타워 디펜스 게임입니다.</p>
+      <div class="project-meta"><span>개발 기간 <strong>3개월</strong></span><span>참여 형태 <strong>개인 프로젝트</strong></span><span>담당 <strong>기획·개발 전담</strong></span><span>기술 <strong>Unity · C# · URP · WebGL</strong></span></div>
+      <div class="tech-stack" aria-label="MeFense 사용 기술"><strong>사용 기술</strong><span>Unity 6000.3.19f1</span><span>C#</span><span>URP 17.3</span><span>Input System 1.19</span><span>AI Navigation 2.0</span><span>WebGL</span></div>
+      <nav class="project-links" aria-label="MeFense 외부 자료">
+        <a href="https://shinseonguk.itch.io/mefense" target="_blank" rel="noopener noreferrer">PLAY ↗</a>
+        <a href="https://github.com/shin-seong-yuk/MeFense" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+        <a href="#intro-video">WATCH VIDEO ↓</a>
+      </nav>
+    </section>
+    <section class="detail-video" id="intro-video" aria-labelledby="intro-video-title">
+      <div class="detail-video-heading"><div><p class="eyebrow">PROJECT FILM / KO</p><h2 id="intro-video-title">게임 소개 영상</h2></div><p>MeFense의 핵심 플레이와 시스템을<br>이 페이지에서 바로 확인할 수 있습니다.</p></div>
+      <div class="project-video-frame">
+        <video controls playsinline preload="metadata" aria-label="MeFense 한국어 소개 영상">
+          <source src="assets/video/mefense-intro-ko.mp4" type="video/mp4">
+          이 브라우저에서는 영상을 재생할 수 없습니다. <a href="assets/video/mefense-intro-ko.mp4">영상 파일을 직접 열어주세요.</a>
+        </video>
+      </div>
+    </section>
+    <nav class="detail-contents" aria-label="상세 페이지 목차">
+      <a href="#motivation">01 제작 계기</a><a href="#systems">02 게임 구조</a><a href="#design">03 설계 고민</a><a href="#webgl">04 문제 해결</a><a href="#reflection">05 배운 점</a>
+    </nav>
+    <section class="detail-section" id="motivation">
+      <p class="eyebrow">01 / MOTIVATION</p>
+      <h2>단순한 수치 강화에서,<br>수식을 설계하는 전략으로.</h2>
+      <p>일반적인 타워 디펜스의 단순한 수치 업그레이드에서 벗어나, 수학 자체가 전략이 되는 게임을 만들고 싶었습니다. 같은 포탑과 카드를 얻더라도 수식 구성, 배치 위치, 전력망 설계에 따라 서로 다른 전략이 만들어지도록 했습니다.</p>
+      <p>플레이어는 포탑마다 부여된 수학적 항과 연산 카드를 조합해 수식을 만들고, 시간에 따라 변화하는 포탑의 성능을 설계합니다. 직접 전투와 건설에도 참여하면서 자신의 전략을 실행합니다.</p>
+    </section>
+    <section class="detail-section" id="systems">
+      <p class="eyebrow">02 / SYSTEMS</p>
+      <h2>직접 구현한 게임의 구조</h2>
+      <div class="detail-cards">
+        <div><h3>C# 수식 계산 · 포탑 AI</h3><p>함수 항과 연산 카드로 구성한 수식을 포탑의 성능에 연결했습니다. 시간에 따른 능력치 변화를 고려해 포탑을 운용하고, AI Navigation으로 전투 공간의 이동 경로를 구성했습니다.</p></div>
+        <div><h3>건설 · 전력망</h3><p>지형, 사거리, 전력 연결과 포탑 배치를 함께 고려하도록 구성했습니다. 수식뿐 아니라 어디에 설치하고 어떻게 연결하는지도 전략의 일부입니다.</p></div>
+        <div><h3>Input System · 직접 전투</h3><p>Unity Input System을 기반으로 1인칭 조작과 전투 입력을 구성했습니다. 직접 전투가 방어의 빈틈을 보완하면서도 포탑 설계의 의미가 유지되도록 역할을 나눴습니다.</p></div>
+        <div><h3>URP · 절차적 맵 · UI</h3><p>URP 기반 3D 화면에 절차적 맵 생성과 UI 시스템을 구현했습니다. 무작위 조건에서도 판단과 실력이 결과에 반영되도록 구성하고, WebGL 빌드로 실제 배포 환경까지 검증했습니다.</p></div>
+      </div>
+    </section>
+    <section class="detail-section" id="design">
+      <p class="eyebrow">03 / DESIGN QUESTIONS</p>
+      <h2>개발하며 고민한 균형</h2>
+      <dl class="design-questions">
+        <div><dt>접근성과 전략성</dt><dd>수학 시스템이 어렵게 느껴지지 않으면서도, 수식의 구성에 따라 전략적 차이가 생기도록 설계했습니다.</dd></div>
+        <div><dt>강력한 조합과 밸런스</dt><dd>강력한 연산이나 함수 하나만으로 게임이 지나치게 쉬워지지 않도록 밸런스를 조정했습니다.</dd></div>
+        <div><dt>직접 전투와 포탑 방어</dt><dd>FPS와 타워 디펜스 중 어느 한쪽이 다른 쪽을 대체하지 않도록 각각의 역할을 고민했습니다.</dd></div>
+        <div><dt>무작위성과 플레이어의 실력</dt><dd>무작위 맵과 웨이브에서도 지형 판단, 배치와 전력망 설계가 의미 있는 선택이 되도록 구성했습니다.</dd></div>
+      </dl>
+    </section>
+    <section class="detail-section" id="webgl">
+      <p class="eyebrow">04 / TROUBLESHOOTING</p>
+      <h2>에디터에서의 완성을<br>실제 웹의 경험으로.</h2>
+      <p>Unity 에디터에서 정상적으로 동작하던 게임을 WebGL로 배포하자 한글과 일부 수학 기호가 사라지고, 발광 효과와 UI 아이콘이 의도와 다르게 표시됐습니다. 브라우저 콘솔과 Unity 로그를 분석해 현상별 원인을 분리했습니다.</p>
+      <div class="detail-cards">
+        <div><h3>폰트 누락</h3><p>WebGL에서는 운영체제 폰트에 의존한 대체 글꼴을 안정적으로 사용할 수 없었습니다. 한글과 수학 기호를 포함한 폰트를 프로젝트 리소스로 추가하고, UI가 공통으로 사용하도록 적용 로직을 통합했습니다.</p></div>
+        <div><h3>셰이더 제거</h3><p>코드에서 런타임에 찾던 셰이더가 빌드 최적화 과정에서 제거되고 있었습니다. 사용하는 URP·UI·Sprite·Skybox 셰이더를 빌드에 명시적으로 포함했습니다.</p></div>
+        <div><h3>아이콘 · 화면 비율</h3><p>플랫폼마다 다르게 보이는 이모지를 AI로 제작한 텍스처 아이콘으로 교체했습니다. 실행 화면을 16:9로 고정하고 itch.io 임베드 영역을 조정해 UI가 잘리는 문제를 해결했습니다.</p></div>
+        <div><h3>반복 검증 · 자동화</h3><p>4일 동안 하루 6시간 이상 원인을 공부하고, 수정할 때마다 실제 웹에서 확인하며 10회 넘게 재배포했습니다. 반복되는 WebGL 설정은 전용 빌드 메뉴로 자동화했습니다.</p></div>
+      </div>
+      <p class="detail-result">그 결과 에디터와 itch.io 배포 환경에서 한글, 수학 기호, 아이콘, 발광 효과와 UI 배치가 일관되게 출력되도록 개선했습니다.</p>
+    </section>
+    <section class="detail-section" id="reflection">
+      <p class="eyebrow">05 / REFLECTION</p>
+      <h2>완성의 기준은 사용자의 경험.</h2>
+      <p>이 프로젝트를 통해 제가 만족하는 상태보다, 실제 사용자가 의도한 경험을 할 수 있는 순간을 완성의 기준으로 삼게 되었습니다. 문제가 생기면 로그와 플랫폼 특성으로 원인을 분리하고, 일회성 수정에 그치지 않도록 반복 설정을 자동화하는 방식을 배웠습니다.</p>
+      <a class="detail-back" href="index.html#mefense">← 프로젝트 목록으로 돌아가기</a>
+    </section>
+  </main>
+  <footer><span>© 2026 SHIN SEONG UK</span><a href="#detail-title">BACK TO TOP ↑</a></footer>
+</body>
+</html>

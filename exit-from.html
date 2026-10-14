@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="신성욱의 개인 프로젝트 EXIT_FROM. 행동을 재현하는 고스트를 활용한 퍼즐과 이야기, 1인 개발 과정을 소개합니다.">
+  <title>EXIT_FROM — 프로젝트 상세 | 신성욱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="detail-page">
+  <header class="detail-nav">
+    <a href="index.html#exit-from">← 포트폴리오로 돌아가기</a>
+    <span>신성욱 / PROJECT 02</span>
+  </header>
+  <main class="detail-main">
+    <nav class="detail-project-switcher" aria-label="프로젝트 선택"><span>SELECT PROJECT</span><a href="mefense.html">01 MeFense</a><a href="exit-from.html" aria-current="page">02 EXIT_FROM</a><a href="not-a-cat.html">03 Not A Cat</a><a href="elevator.html">04 Elevator</a></nav>
+    <section class="detail-hero" aria-labelledby="detail-title">
+      <p class="eyebrow">3D TOP-DOWN PUZZLE ACTION · PERSONAL PROJECT</p>
+      <h1 id="detail-title">EXIT_FROM</h1>
+      <p class="detail-tagline">내 행동을 재현하는 고스트, 그 너머의 이야기.</p>
+      <p class="project-lead">캡슐 형태의 실험체를 조작하고, 자신의 행동을 기록·재생하는 ‘고스트’를 이용해 실험실을 탈출하는 3D 탑뷰 퍼즐 액션 게임입니다.</p>
+      <div class="project-meta"><span>개발 기간 <strong>6개월</strong></span><span>참여 형태 <strong>개인 프로젝트</strong></span><span>담당 <strong>기획·구현·레벨 디자인·UI·연출</strong></span><span>기술 <strong>Unity · C#</strong></span></div>
+      <div class="tech-stack" aria-label="EXIT_FROM 사용 기술"><strong>사용 기술</strong><span>Unity</span><span>C#</span><span>행동 기록·재생</span><span>3D Top-View</span><span>레벨 디자인</span><span>UI 시스템</span></div>
+      <nav class="project-links" aria-label="EXIT_FROM 외부 자료">
+        <a href="https://shinseonguk.itch.io/exit-from" target="_blank" rel="noopener noreferrer">PLAY ↗</a>
+      </nav>
+    </section>
+    <nav class="detail-contents" aria-label="상세 페이지 목차">
+      <a href="#concept">01 핵심 콘셉트</a><a href="#systems">02 주요 시스템</a><a href="#chapters">03 챕터와 이야기</a><a href="#development">04 개발 과정</a><a href="#reflection">05 회고</a>
+    </nav>
+    <section class="detail-section" id="concept">
+      <p class="eyebrow">01 / CONCEPT</p>
+      <h2>나는 탈출하고 있는가,<br>누군가를 도구로 사용하고 있는가?</h2>
+      <p>플레이어는 고스트를 소환하고, 필요한 행동을 맡기며 퍼즐을 해결합니다. 처음에는 자연스러운 게임 규칙이지만, 고스트가 감정을 가진 존재처럼 말하기 시작하면서 그 행동의 의미가 달라집니다.</p>
+      <p>친근한 인사에서 의심과 비난으로 변하는 고스트의 태도를 통해, 타인을 도구처럼 바라보는 시선에 질문을 던지고 싶었습니다.</p>
+    </section>
+    <section class="detail-section" id="systems">
+      <p class="eyebrow">02 / SYSTEMS</p>
+      <h2>기록된 행동을 퍼즐의 해답으로.</h2>
+      <div class="detail-cards">
+        <div><h3>고스트 시스템</h3><p>플레이어의 행동을 기록하고 다시 재생하는 분신 시스템입니다. 고스트가 압력판을 누르거나 문과 장치를 작동하는 동안, 플레이어는 다른 경로로 이동할 수 있습니다.</p></div>
+        <div><h3>서로 다른 이동 경로</h3><p>고스트 전용 문처럼 플레이어와 고스트가 통과할 수 있는 경로를 구분했습니다. 한 캐릭터의 이동만으로 풀 수 없는 상황에서 두 존재의 역할을 나누게 합니다.</p></div>
+        <div><h3>장애물의 조합</h3><p>압력판, 레이저, 움직이는 발판, 고스트 전용 문, 색 변환 발판을 조합했습니다. 새로운 장애물을 계속 추가하기보다 기존 장치의 관계를 바꾸며 난이도를 높였습니다.</p></div>
+        <div><h3>공간 자체가 되는 장애물</h3><p>아직 사용하지 않은 장치 조합과 맵 구조를 함께 고민했습니다. 변화하는 미로처럼 공간 자체가 플레이어를 방해하도록 구성하며 이동 흐름을 설계했습니다.</p></div>
+      </div>
+    </section>
+    <section class="detail-section" id="chapters">
+      <p class="eyebrow">03 / NARRATIVE</p>
+      <h2>협력에서 의심으로 바뀌는 관계</h2>
+      <dl class="design-questions">
+        <div><dt>CH. 0 / 튜토리얼</dt><dd>기본 조작과 고스트 시스템을 학습합니다. 밝고 친근한 고스트의 인사로 관계가 시작됩니다.</dd></div>
+        <div><dt>CH. 1 / 협력</dt><dd>압력판·문·레이저를 조합한 퍼즐을 함께 해결하며, 고스트와 탈출을 준비하는 동료처럼 느끼도록 구성했습니다.</dd></div>
+        <div><dt>CH. 2 / 의심</dt><dd>고스트 전용 문과 변화하는 미로로 고스트의 활용이 늘어납니다. 동시에 고스트는 자신의 존재와 플레이어를 의심하고, 사라질 때 비명을 내기 시작합니다.</dd></div>
+        <div><dt>CH. 3 / 폭로</dt><dd>고스트는 자신들이 도구로 사용되고 있음을 직접 지적합니다. 마지막 스테이지 이후에는 지금까지의 플레이를 다시 바라보게 하는 반전이 이어집니다.</dd></div>
+      </dl>
+      <details class="story-spoiler">
+        <summary>결말과 시점 전환 보기 <span>스포일러 포함</span></summary>
+        <p>마지막 스테이지를 클리어하면 탑뷰에서 1인칭으로 시점이 바뀝니다. 플레이어는 실험실 안을 바라보던 진짜 관찰자였으며, 지금까지 조작한 캐릭터와 고스트는 실험 대상이었다는 사실이 드러납니다.</p>
+        <p>관찰자의 손은 사람의 손이지만 다른 연구원은 여전히 캡슐처럼 보입니다. 단순한 캐릭터 형태를 통해 ‘사람을 도구로 바라보는 시선’이라는 메시지를 시각적으로 연결했습니다.</p>
+      </details>
+    </section>
+    <section class="detail-section" id="development">
+      <p class="eyebrow">04 / DEVELOPMENT</p>
+      <h2>제약과 테스트가 바꾼 개발 방식</h2>
+      <div class="detail-cards">
+        <div><h3>완성된 기믹보다 수정 가능한 구조</h3><p>처음에는 모든 기믹을 미리 만든 뒤 조합하려 했습니다. 하지만 구현과 테스트에서 재미가 계속 달라지는 것을 경험하며, 유지보수와 확장이 쉬운 구조를 우선하는 방향으로 바꿨습니다.</p></div>
+        <div><h3>디자인의 제약을 작품의 개성으로</h3><p>1인 개발에서 가장 부담스러웠던 디자인을 단순한 캡슐 캐릭터로 풀었습니다. 이 선택을 이야기와 연결하면서 실험실 탈출 게임이 타인을 바라보는 시선에 대한 작품으로 발전했습니다.</p></div>
+        <div><h3>장치의 수보다 공간의 흐름</h3><p>매번 새로운 장애물을 고안하는 대신, 아직 조합하지 않은 요소와 맵 구조를 살폈습니다. 이를 통해 퍼즐의 새로움은 장치뿐 아니라 공간의 흐름에서도 만들어진다는 것을 배웠습니다.</p></div>
+        <div><h3>반복 탐색의 성능 개선</h3><p>매 프레임 반복하던 오브젝트 탐색을 초기화 시 참조를 저장하는 방식으로 변경했습니다. 그 결과 프레임 저하가 발생하던 스테이지에서 성능 개선을 확인했습니다.</p></div>
+      </div>
+    </section>
+    <section class="detail-section" id="reflection">
+      <p class="eyebrow">05 / REFLECTION</p>
+      <h2>좋은 기획은 만들면서 다듬어진다.</h2>
+      <p>좋은 기획은 처음부터 완벽한 아이디어를 내는 것이 아니라, 제작 과정에서 문제를 발견하고 해결할 수 있는 구조로 계속 다듬는 것임을 배웠습니다. 이후에는 새로운 기능을 추가하는 것과 함께, 시스템의 확장성과 기존 요소를 더 재미있게 재조합하는 방법을 중요하게 생각하게 되었습니다.</p>
+      <a class="detail-back" href="index.html#exit-from">← 프로젝트 목록으로 돌아가기</a>
+    </section>
+  </main>
+  <footer><span>© 2026 SHIN SEONG UK</span><a href="#detail-title">BACK TO TOP ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="신성욱의 1인 개발 프로젝트 Elevator. Steam 멀티플레이, 물리 전투와 층별 방해 요소를 결합한 파티 액션 게임입니다.">
+  <title>Elevator — 프로젝트 상세 | 신성욱</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="detail-page">
+  <header class="detail-nav"><a href="index.html#elevator">← 포트폴리오로 돌아가기</a><span>신성욱 / PROJECT 04</span></header>
+  <main class="detail-main">
+    <nav class="detail-project-switcher" aria-label="프로젝트 선택"><span>SELECT PROJECT</span><a href="mefense.html">01 MeFense</a><a href="exit-from.html">02 EXIT_FROM</a><a href="not-a-cat.html">03 Not A Cat</a><a href="elevator.html" aria-current="page">04 Elevator</a></nav>
+    <section class="detail-hero" aria-labelledby="detail-title">
+      <p class="eyebrow">STEAM MULTIPLAYER · PHYSICS PARTY · SOLO PROJECT</p>
+      <h1 id="detail-title">Elevator</h1>
+      <p class="detail-tagline">문이 열릴 때마다 전투의 조건이 바뀐다.</p>
+      <p class="project-lead">엘리베이터라는 제한된 공간에서 무기로 싸워 최후의 1인이 되는 멀티플레이 물리 파티 게임입니다. Steam으로 다른 플레이어와 방을 만들거나, 싱글에서 AI와 전투할 수 있습니다.</p>
+      <div class="project-meta"><span>참여 형태 <strong>개인 프로젝트</strong></span><span>담당 <strong>기획·개발 전담</strong></span><span>플레이 <strong>싱글 AI · Steam 멀티플레이</strong></span><span>기술 <strong>Unity · C#</strong></span></div>
+      <div class="tech-stack" aria-label="Elevator 사용 기술"><strong>사용 기술</strong><span>Unity 6000.3.19f1</span><span>C#</span><span>Netcode for GameObjects 2.7</span><span>Steamworks.NET</span><span>Input System 1.19</span><span>URP 17.3</span><span>AI Navigation 2.0</span></div>
+      <nav class="project-links" aria-label="Elevator 외부 자료"><a href="https://github.com/shin-seong-yuk/Elevator" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></nav>
+    </section>
+    <nav class="detail-contents" aria-label="상세 페이지 목차"><a href="#concept">01 핵심 콘셉트</a><a href="#combat">02 전투 구조</a><a href="#multiplayer">03 멀티플레이</a><a href="#floors">04 층별 변수</a><a href="#solo">05 1인 개발</a></nav>
+    <section class="detail-section" id="concept">
+      <p class="eyebrow">01 / CONCEPT</p><h2>도망칠 수 없는 공간에서<br>최후의 1인을 가린다.</h2>
+      <p>넓은 전장이 아니라 엘리베이터 한 칸을 전투 공간으로 삼았습니다. 플레이어들은 가까운 거리에서 무기를 두고 싸우며, 마지막까지 살아남은 한 명이 승리합니다.</p>
+    </section>
+    <section class="detail-section" id="combat">
+      <p class="eyebrow">02 / COMBAT</p><h2>공간의 제약을 전투의 재미로</h2>
+      <div class="detail-cards">
+        <div><h3>제한된 동선</h3><p>좁은 공간에서는 거리 확보와 회피가 쉽지 않습니다. 상대의 위치와 무기 범위를 빠르게 판단하도록 전투를 구성했습니다.</p></div>
+        <div><h3>무기 경쟁</h3><p>플레이어가 무기를 확보하고 활용하는 과정이 매 순간의 우위를 바꾸도록 설계했습니다.</p></div>
+        <div><h3>최후의 생존자</h3><p>한 명만 남을 때까지 전투가 이어지는 명확한 목표를 두어 짧고 집중도 높은 플레이 흐름을 만들었습니다.</p></div>
+        <div><h3>반복 가능한 한 판</h3><p>같은 엘리베이터에서도 무기와 층별 상황이 달라져 매 판 다른 판단이 필요하도록 구성했습니다.</p></div>
+      </div>
+    </section>
+    <section class="detail-section" id="multiplayer">
+      <p class="eyebrow">03 / STEAM MULTIPLAYER</p><h2>Steam 로그인부터 대기실과 게임 시작까지</h2>
+      <p>Steam 로그인 후 방을 생성하거나 참가할 수 있습니다. 엘리베이터 대기실에서 참가자가 준비 상태를 정하고, 모두 준비되면 방장이 게임을 시작합니다. 싱글 플레이에서는 AI 3명·5명·7명 구성을 선택해 같은 핵심 전투를 플레이할 수 있습니다.</p>
+      <div class="detail-cards">
+        <div><h3>Steamworks.NET</h3><p>Steam 로그인과 방 생성·참가 흐름을 연결해 Steam에서 게임을 실행한 사용자가 자연스럽게 멀티플레이 대기실로 이어지도록 구성했습니다.</p></div>
+        <div><h3>Netcode for GameObjects 2.7</h3><p>멀티플레이 세션과 네트워크 오브젝트를 구성하는 기반으로 활용했습니다. 준비 상태와 방장 시작 조건을 포함한 대기실 흐름을 게임 진입 과정에 연결했습니다.</p></div>
+      </div>
+    </section>
+    <section class="detail-section" id="floors">
+      <p class="eyebrow">04 / FLOOR EVENTS</p><h2>층이 바뀔 때마다 추가되는 방해</h2>
+      <p>엘리베이터가 새로운 층에 도착할 때마다 전투를 방해하는 요소가 등장합니다. 플레이어는 상대의 공격뿐 아니라 변화하는 환경에도 대응해야 하며, 층 이동이 다음 상황에 대한 긴장감을 만듭니다.</p>
+    </section>
+    <section class="detail-section" id="solo">
+      <p class="eyebrow">05 / SOLO DEVELOPMENT</p><h2>핵심 규칙부터 전투 흐름까지 직접 구현</h2>
+      <p>게임의 아이디어와 규칙을 설계하고, 전투와 층 진행 로직을 직접 구현하고 있습니다. Input System으로 조작 체계를 구성하고, AI Navigation을 싱글 플레이의 AI 이동에 활용했습니다. URP 기반 화면과 제한된 공간, 생존 경쟁, 층별 변수가 하나의 플레이 흐름으로 연결되는지를 빠르게 만들고 검증하는 데 집중했습니다.</p>
+      <a class="detail-back" href="index.html#elevator">← 프로젝트 목록으로 돌아가기</a>
+    </section>
+  </main>
+  <footer><span>© 2026 SHIN SEONG UK</span><a href="#detail-title">BACK TO TOP ↑</a></footer>
+</body>
+</html>

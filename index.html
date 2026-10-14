@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="직접 만들고 배포하며 사용자 경험을 개선하는 게임 개발 프로그래머 신성욱의 포트폴리오입니다.">
+  <title>신성욱 | Game Developer</title>
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem('portfolio-theme')==='light'?'light':'dark'}catch{document.documentElement.dataset.theme='dark'}</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="range.css">
+  <script src="theme.js" defer></script>
+  <script src="range-loader.js" defer></script>
+  <script src="project-modal.js" defer></script>
+</head>
+<body>
+  <div class="sky-decor" aria-hidden="true"><span class="celestial-stars"></span><span class="celestial-cloud cloud-one"></span><span class="celestial-cloud cloud-two"></span><span class="celestial-cloud cloud-three"></span><span class="celestial-cloud cloud-four"></span><span class="celestial-cloud cloud-five"></span><span class="celestial-cloud cloud-six"></span></div>
+  <div class="hero-celestial" aria-hidden="true"><span class="celestial-orbit"><span class="celestial-moon"></span><span class="celestial-sun"></span></span></div>
+  <a class="skip-content" href="#projects">프로젝트 본문으로 바로 가기</a>
+  <nav class="portfolio-nav" aria-label="포트폴리오 메뉴"><a href="#top" class="portfolio-brand">신성욱<span> / GAME DEVELOPER</span></a><div class="nav-actions"><div class="nav-links"><a href="#range-title">연습장</a><a href="#projects">프로젝트</a><a href="#about">소개 · 연락처</a></div><button id="theme-toggle" class="theme-toggle" type="button" aria-pressed="false" aria-label="라이트 모드로 전환"><span aria-hidden="true">☀</span><span class="theme-toggle-text">라이트 모드</span></button></div></nav>
+  <header class="hero" id="top">
+    <p class="hero-kicker">GAME DEVELOPMENT PROGRAMMER</p>
+    <h1>신성욱</h1>
+    <p class="hero-subtitle">플레이어의 재미를 출발점으로, 직접 만들고 검증하며 끝까지 다듬습니다.</p>
+    <aside class="education-card" aria-labelledby="hero-education-title">
+      <h2 id="hero-education-title">EDUCATION <span>학력</span></h2>
+      <ol>
+        <li><strong>용수초등학교</strong><span>2008.03 — 2014.02</span></li>
+        <li><strong>화명중학교</strong><span>2014.03 — 2017.02</span></li>
+        <li><strong>금곡고등학교</strong><span>2017.03 — 2020.02</span></li>
+        <li><strong>부산대학교 정보컴퓨터공학과</strong><span>2023.03 — 현재</span></li>
+      </ol>
+      <p class="education-award"><span>SCHOLARSHIP</span><strong>입학 성적 우수 · 4년 전액 장학</strong></p>
+    </aside>
+    <div class="hero-actions"><a href="#range-title">연습장 입장 ↓</a><a href="#projects">프로젝트 먼저 보기 ↗</a></div>
+    <div class="hero-skills" aria-label="사용 가능한 기술과 도구">
+      <span class="hero-skills-label">SKILLS &amp; TOOLS</span>
+      <ul>
+        <li>Unity</li><li>C#</li><li>C++</li><li>AI</li>
+      </ul>
+    </div>
+    <nav class="hero-featured" aria-label="대표 프로젝트 바로 보기"><span>FEATURED PROJECT / ELEVATOR</span><a class="featured-project" href="#elevator" aria-label="대표 프로젝트 Elevator 자세히 보기"><img src="assets/elevator-featured-v2.png" alt="게임 속 엘리베이터 문이 열리고 캐릭터들이 전투한다. 이미지 하단에는 게임 제목 Elevator가 적혀 있다" width="1672" height="941" fetchpriority="high"></a></nav>
+    <section class="loadout" aria-labelledby="loadout-title">
+      <div class="section-label"><span>01</span><h2 id="loadout-title">무기를 선택하세요</h2><p>각 무기는 서로 다른 공격 효과를 가집니다.</p></div>
+      <div class="weapon-list" role="radiogroup" aria-label="무기 선택">
+        <button class="weapon is-selected" type="button" data-weapon="sword" role="radio" aria-checked="true"><span class="weapon-icon" aria-hidden="true">⚔</span><strong>검</strong><small>SLASH</small></button>
+        <button class="weapon" type="button" data-weapon="bow" role="radio" aria-checked="false"><span class="weapon-icon" aria-hidden="true">➶</span><strong>활</strong><small>ARROW</small></button>
+        <button class="weapon" type="button" data-weapon="gun" role="radio" aria-checked="false"><span class="weapon-icon" aria-hidden="true">⌐╦</span><strong>총</strong><small>RIFLE</small></button>
+        <button class="weapon" type="button" data-weapon="staff" role="radio" aria-checked="false"><span class="weapon-icon" aria-hidden="true">✦</span><strong>지팡이</strong><small>MAGIC</small></button>
+        <button class="weapon" type="button" data-weapon="dagger" role="radio" aria-checked="false"><span class="weapon-icon" aria-hidden="true">†</span><strong>단검</strong><small>THROW</small></button>
+        <button class="weapon" type="button" data-weapon="shotgun" role="radio" aria-checked="false"><span class="weapon-icon" aria-hidden="true">⌐╦</span><strong>산탄총</strong><small>SHOTGUN</small></button>
+        <button class="weapon" type="button" data-weapon="hammer" role="radio" aria-checked="false"><span class="weapon-icon" aria-hidden="true">⊤</span><strong>해머</strong><small>SHOCKWAVE</small></button>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="range-section" aria-labelledby="range-title">
+      <div class="range-heading"><div><p class="eyebrow">INTERACTIVE PROJECT RANGE</p><h2 id="range-title">프로젝트 연습장</h2></div><p>마우스로 조준하고 공격하세요.<br>총은 누르고 있으면 연사됩니다.</p></div>
+      <div class="range-toolbar">
+        <span><i class="live-dot"></i> THE PROVING GROUND <small> / 3D</small></span>
+        <div><label><input id="auto-open" type="checkbox" checked> 명중 시 프로젝트 이동</label><button id="sound-toggle" type="button" aria-pressed="false">사운드 OFF</button><button id="quality-toggle" type="button" aria-pressed="false">절전 OFF</button><button id="pause-toggle" type="button" aria-pressed="false">일시정지</button></div>
+      </div>
+      <div class="range-quickbar" role="group" aria-label="연습장 무기 빠른 선택">
+        <button type="button" data-equip="sword" aria-pressed="true">01 <span>검</span></button><button type="button" data-equip="bow" aria-pressed="false">02 <span>활</span></button><button type="button" data-equip="gun" aria-pressed="false">03 <span>총</span></button><button type="button" data-equip="staff" aria-pressed="false">04 <span>지팡이</span></button><button type="button" data-equip="dagger" aria-pressed="false">05 <span>단검</span></button>
+        <button id="reset-props" type="button">소품·벽 복구</button>
+        <button type="button" data-equip="shotgun" aria-pressed="false">06 <span>산탄총</span></button><button type="button" data-equip="hammer" aria-pressed="false">07 <span>해머</span></button>
+        <span class="quickbar-note">벽은 명중한 구획만 손상 · 범위 공격은 주변 구획까지 · 활과 단검은 박힌 채 유지 · 복구 버튼으로 초기화</span>
+      </div>
+      <div class="range" id="range" tabindex="0" data-weapon="sword" aria-label="프로젝트를 선택하는 인터랙티브 연습장">
+        <div class="range-world" aria-hidden="true"></div>
+        <canvas id="three-canvas" aria-label="3D 연습장. 마우스나 터치로 허수아비를 조준하고 공격하세요."></canvas>
+        <p id="range-loading" class="range-loading" role="status">3D 연습장을 준비하고 있습니다…</p>
+        <div class="range-atmosphere" aria-hidden="true"></div>
+        <div class="equip-swoosh" aria-hidden="true"></div>
+        <div class="range-hud"><span><b>LIVE TRAINING</b><small>SEONG UK / PORTFOLIO</small></span><span class="hud-right">SECTOR 07<br><small>POSITION LOCKED</small></span></div>
+        <button class="range-label" type="button" data-destination="#mefense" data-target="0" aria-label="MeFense 프로젝트 표적"><small>01 / UNITY · WEBGL</small><strong>MeFense</strong></button>
+        <button class="range-label" type="button" data-destination="#exit-from" data-target="1" aria-label="EXIT_FROM 프로젝트 표적"><small>02 / FIRST RELEASE</small><strong>EXIT_FROM</strong></button>
+        <button class="range-label" type="button" data-destination="#not-a-cat" data-target="2" aria-label="Not A Cat 프로젝트 표적"><small>03 / TEAM PROJECT</small><strong>Not A Cat</strong></button>
+        <button class="range-label" type="button" data-destination="#elevator" data-target="3" aria-label="Elevator 프로젝트 표적"><small>04 / SOLO ACTION</small><strong>Elevator</strong></button>
+        <button class="range-label" type="button" data-destination="#about" data-target="4" aria-label="신성욱 소개 표적"><small>05 / THE DEVELOPER</small><strong>About Me</strong></button>
+        <div class="crosshair" id="crosshair" aria-hidden="true"><i></i></div>
+        <div class="hit-notice" id="hit-notice" role="status" aria-live="polite"></div>
+        <div class="range-bottom"><div><small>EQUIPPED / ∞</small><strong id="weapon-readout">EDGE / LONGSWORD</strong><span id="weapon-hint">검을 휘둘러 검기를 날립니다</span></div><div class="range-guide">조준 · 클릭 공격<br><span>총은 누르고 연사 · 스크롤하여 건너뛰기 ↓</span></div></div>
+      </div>
+      <div class="range-footer"><span>이동 없이 조준만 · 모바일에서는 터치 · 스크롤은 언제든 가능</span><a href="#projects">프로젝트 바로 보기 ↘</a></div>
+      <nav class="range-mobile-targets" aria-label="모바일 프로젝트 바로가기">
+        <p>표적이 작다면 여기서 바로 이동하세요</p>
+        <a href="#mefense">01 <strong>MeFense</strong> ↘</a><a href="#exit-from">02 <strong>EXIT_FROM</strong> ↘</a>
+        <a href="#not-a-cat">03 <strong>Not A Cat</strong> ↘</a><a href="#elevator">04 <strong>Elevator</strong> ↘</a>
+        <a href="#about">05 <strong>About Me</strong> ↘</a>
+      </nav>
+      <noscript><p>게임 대신 아래 프로젝트를 바로 확인할 수 있습니다. <a href="#mefense">MeFense</a> · <a href="#exit-from">EXIT_FROM</a> · <a href="#not-a-cat">Not A Cat</a> · <a href="#elevator">Elevator</a> · <a href="#about">About Me</a></p></noscript>
+    </section>
+
+    <section class="projects" id="projects">
+      <article class="project" id="mefense">
+        <div class="project-index">PROJECT 01</div>
+        <div class="project-main"><p class="eyebrow">UNITY · C# · URP · WEBGL</p><h2><a class="project-title-link" href="mefense.html" aria-label="MeFense 상세 내용 보기">MeFense<span aria-hidden="true">↗</span></a></h2><p class="project-lead">수학(Math)과 디펜스(Defense)를 결합한 3D FPS 타워 디펜스 게임입니다. 플레이어가 직접 전투와 건설에 참여하며, 포탑마다 부여된 수학적 항을 연결해 시간에 따라 변화하는 포탑의 성능을 설계합니다.</p>
+          <div class="project-meta"><span>기간 <strong>3개월</strong></span><span>형태 <strong>개인 프로젝트</strong></span><span>역할 <strong>기획·개발 전담</strong></span></div>
+          <div class="tech-stack" aria-label="MeFense 사용 기술"><strong>사용 기술</strong><span>Unity 6</span><span>C#</span><span>URP</span><span>Input System</span><span>AI Navigation</span><span>WebGL</span></div>
+          <figure class="project-video">
+            <div class="project-video-frame">
+              <video controls playsinline preload="metadata" aria-label="MeFense 한국어 소개 영상">
+                <source src="assets/video/mefense-intro-ko.mp4" type="video/mp4">
+                이 브라우저에서는 영상을 재생할 수 없습니다. 아래 VIDEO 버튼으로 영상을 열어주세요.
+              </video>
+            </div>
+            <figcaption><span>PROJECT FILM / KO</span><strong>게임 소개 영상</strong><small>재생 버튼을 누르면 이 페이지에서 바로 볼 수 있습니다.</small></figcaption>
+          </figure>
+          <div class="project-grid">
+            <div><h3>제작 계기</h3><p>단순한 수치 업그레이드를 넘어 수학 자체가 전략이 되는 게임을 만들고 싶었습니다. 같은 포탑과 카드를 얻더라도 수식 구성, 배치 위치, 전력망 설계에 따라 다른 전략이 만들어지도록 했습니다.</p></div>
+            <div><h3>구현한 시스템</h3><p>게임 규칙부터 수식 계산, 포탑 AI, 전력망, 절차적 맵 생성, 전투·웨이브와 UI까지 직접 구현했습니다. 지형·사거리·전력 연결·포탑 배치를 함께 고려하는 전투 구조를 구성했습니다.</p></div>
+            <div><h3>설계하며 고민한 부분</h3><ul><li>수학을 쉽게 이해하면서도 전략적으로 활용할 수 있는 구조</li><li>특정 연산·함수 하나에 치우치지 않는 밸런스</li><li>직접 전투와 포탑 방어가 서로를 대체하지 않는 역할 분배</li><li>무작위 맵과 웨이브에서도 판단과 실력이 반영되는 플레이</li></ul></div>
+            <div><h3>배포 환경에서의 완성도</h3><p>WebGL의 한글·수학 기호·셰이더 표시 문제를 로그로 분석하고, UI와 화면 비율을 조정했습니다. 실제 웹에 10회 이상 재배포해 확인하고 전용 빌드 메뉴로 반복 설정을 자동화했습니다.</p></div>
+          </div>
+          <nav class="project-links" aria-label="MeFense 관련 링크"><a href="https://shinseonguk.itch.io/mefense" target="_blank" rel="noopener noreferrer">PLAY ↗</a><a href="https://github.com/shin-seong-yuk/MeFense" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="assets/video/mefense-intro-ko.mp4" target="_blank" rel="noopener noreferrer">VIDEO ↗</a></nav>
+        </div>
+      </article>
+      <article class="project" id="exit-from">
+        <div class="project-index">PROJECT 02</div>
+        <div class="project-main"><p class="eyebrow">UNITY · C# · 3D PUZZLE ACTION</p><h2><a class="project-title-link" href="exit-from.html" aria-label="EXIT_FROM 상세 내용 보기">EXIT_FROM<span aria-hidden="true">↗</span></a></h2><p class="project-lead">자신의 행동을 기록하고 재현하는 ‘고스트’를 이용해 실험실을 탈출하는 3D 탑뷰 퍼즐 액션 게임입니다. 퍼즐을 풀어가는 과정에서 타인을 도구로 바라보는 시선에 질문을 던집니다.</p>
+          <div class="project-meta"><span>기간 <strong>6개월</strong></span><span>형태 <strong>개인 프로젝트</strong></span><span>역할 <strong>기획·개발 전담</strong></span></div>
+          <div class="tech-stack" aria-label="EXIT_FROM 사용 기술"><strong>사용 기술</strong><span>Unity</span><span>C#</span><span>행동 기록·재생</span><span>3D Top-View</span><span>레벨 디자인</span><span>UI 시스템</span></div>
+          <figure class="project-still project-still-single"><img src="assets/exit-from-title.png" alt="EXIT_FROM 실제 게임 타이틀 화면. 어두운 실험실과 고스트, 출구가 보인다" loading="lazy"><figcaption><span>IN-GAME / TITLE SCREEN</span><strong>EXIT_FROM 실제 게임 화면</strong></figcaption></figure>
+          <div class="project-grid">
+            <div><h3>고스트와 퍼즐</h3><p>기록된 행동을 재생하는 고스트로 압력판과 장치를 작동하고, 플레이어와 다른 경로를 이동합니다. 레이저·움직이는 발판·고스트 전용 문·색 변환 발판을 조합해 난이도를 높였습니다.</p></div>
+            <div><h3>시스템이 이야기가 되도록</h3><p>친근하던 고스트가 점차 플레이어를 의심하고 비난하며, 익숙했던 퍼즐 풀이를 불편한 선택으로 바꿉니다. 단순한 캡슐 캐릭터와 마지막 시점 전환을 ‘타인을 도구로 보는 시선’이라는 주제에 연결했습니다.</p></div>
+            <div><h3>개발 방식의 변화</h3><p>모든 기믹을 미리 완성하려 했지만, 구현과 테스트에 따라 재미도 달라졌습니다. 이후 수정·확장이 쉬운 구조와 기존 장치의 재조합을 중심으로 개발 방식을 바꿨습니다.</p></div>
+            <div><h3>회고</h3><p>기획·구현·레벨 디자인·UI·연출을 혼자 맡으며, 디자인의 제약을 작품의 개성으로 바꿨습니다. 장애물의 수보다 공간의 흐름이 중요하며, 기획은 제작 중 발견한 문제를 해결하며 다듬어진다는 것을 배웠습니다.</p></div>
+          </div>
+          <nav class="project-links" aria-label="EXIT_FROM 관련 링크"><a href="https://shinseonguk.itch.io/exit-from" target="_blank" rel="noopener noreferrer">PLAY ↗</a></nav>
+        </div>
+      </article>
+      <article class="project" id="not-a-cat">
+        <div class="project-index">PROJECT 03</div>
+        <div class="project-main"><p class="eyebrow">UNITY · C# · TEAM PROJECT · SOCIAL DEDUCTION</p><h2><a class="project-title-link" href="not-a-cat.html" aria-label="Not A Cat 상세 내용 보기">Not A Cat<span aria-hidden="true">↗</span></a></h2><p class="project-lead">고양이 마피아 조직에 숨어든 첩자 ‘삵’을 찾아내는 직업 기반 심리 게임입니다. 각 고양이와 삵은 고유한 직업과 능력을 사용하며, 미션과 대화 속에서 서로의 정체를 추리합니다.</p>
+          <div class="project-meta"><span>기간 <strong>2026.07 ~ 진행 중</strong></span><span>형태 <strong>6인 팀 프로젝트</strong></span><span>역할 <strong>기획·개발</strong></span></div>
+          <div class="tech-stack" aria-label="Not A Cat 사용 기술"><strong>사용 기술</strong><span>Unity</span><span>C#</span><span>게임 규칙 시스템</span><span>미션 시스템</span><span>텍스트 채팅</span><span>보이스 채팅</span></div>
+          <figure class="project-video">
+            <div class="project-video-frame"><video controls playsinline preload="metadata" aria-label="Not A Cat 게임 소개 영상"><source src="assets/video/not-a-cat-intro-ko.mp4" type="video/mp4">이 브라우저에서는 영상을 재생할 수 없습니다. 아래 VIDEO 버튼으로 영상을 열어주세요.</video></div>
+            <figcaption><span>PROJECT FILM / KO</span><strong>게임 소개 영상</strong><small>팀이 만들고 있는 플레이 경험을 이 페이지에서 바로 확인할 수 있습니다.</small></figcaption>
+          </figure>
+          <div class="project-grid">
+            <div><h3>게임 콘셉트</h3><p>고양이들 사이에 숨은 삵을 찾아내는 마피아형 심리 게임입니다. 직업별 특성과 능력, 미션 수행과 대화를 통해 정보를 모으고 상대의 정체를 추리합니다.</p></div>
+            <div><h3>기획</h3><p>맵 구성과 직업 구성, 게임 규칙과 전체 흐름을 설계했습니다. 플레이어가 이동·미션·토론을 거치며 자연스럽게 의심과 판단의 근거를 만들도록 구성했습니다.</p></div>
+            <div><h3>개발</h3><p>맵 구현, 게임 로직 설정, 미션 구성과 구현을 담당했습니다. 기획 단계의 규칙이 실제 플레이 흐름으로 이어지도록 시스템을 연결했습니다.</p></div>
+            <div><h3>멀티플레이 소통</h3><p>플레이어가 상황과 정보를 교환할 수 있도록 텍스트 채팅과 보이스 채팅을 구현했습니다. 심리전의 핵심인 대화가 게임 안에서 이어지도록 했습니다.</p></div>
+          </div>
+          <nav class="project-links" aria-label="Not A Cat 관련 링크"><a href="https://github.com/Apptive-Game-Team/mafia" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="assets/video/not-a-cat-intro-ko.mp4" target="_blank" rel="noopener noreferrer">VIDEO ↗</a></nav>
+        </div>
+      </article>
+      <article class="project" id="elevator">
+        <div class="project-index">PROJECT 04</div>
+        <div class="project-main"><p class="eyebrow">UNITY · C# · STEAM MULTIPLAYER · PHYSICS PARTY</p><h2><a class="project-title-link" href="elevator.html" aria-label="Elevator 상세 내용 보기">Elevator<span aria-hidden="true">↗</span></a></h2><p class="project-lead">엘리베이터라는 제한된 공간에서 최후의 1인이 남을 때까지 무기로 싸우는 멀티플레이 물리 파티 게임입니다. 층이 바뀔 때마다 등장하는 방해 요소를 버티며 전투를 이어갑니다.</p>
+          <div class="project-meta"><span>형태 <strong>개인 프로젝트</strong></span><span>역할 <strong>기획·개발 전담</strong></span><span>플레이 <strong>싱글 AI · Steam 멀티플레이</strong></span></div>
+          <div class="tech-stack" aria-label="Elevator 사용 기술"><strong>사용 기술</strong><span>Unity 6</span><span>C#</span><span>Netcode for GameObjects</span><span>Steamworks.NET</span><span>Input System</span><span>URP</span><span>AI Navigation</span></div>
+          <div class="project-stills" aria-label="Elevator 실제 게임 화면"><figure class="project-still project-still-feature"><img src="assets/elevator-combat.png" alt="엘리베이터 안에서 여러 캐릭터가 무기를 들고 전투하는 실제 게임 화면" loading="lazy"><figcaption><span>IN-GAME / COMBAT</span><strong>좁은 공간의 물리 전투</strong></figcaption></figure><figure class="project-still"><img src="assets/elevator-menu.png" alt="Elevator 게임의 싱글 및 멀티플레이 선택 화면" loading="lazy"><figcaption><span>IN-GAME / MENU</span><strong>싱글·멀티플레이</strong></figcaption></figure><figure class="project-still"><img src="assets/elevator-floor.png" alt="새로운 층에 도착한 엘리베이터에서 펼쳐지는 전투 장면" loading="lazy"><figcaption><span>IN-GAME / FLOOR 02</span><strong>층별 환경 변화</strong></figcaption></figure></div>
+          <div class="project-grid">
+            <div><h3>핵심 전투</h3><p>좁은 엘리베이터 안에서 무기를 획득하고 상대와 싸워 최후의 1인이 되는 전투를 구성했습니다. 제한된 공간 자체가 전투의 긴장감을 만드는 구조입니다.</p></div>
+            <div><h3>층별 방해 요소</h3><p>엘리베이터가 층에 도착할 때마다 새로운 방해가 등장합니다. 플레이어는 상대뿐 아니라 매 층의 환경 변화에도 대응해야 합니다.</p></div>
+            <div><h3>Steam 멀티플레이</h3><p>Steam 로그인 후 방을 생성하거나 참가하고, 엘리베이터 대기실에서 준비 상태를 맞춘 뒤 방장이 게임을 시작하는 흐름을 구현했습니다.</p></div>
+            <div><h3>싱글과 멀티</h3><p>싱글에서는 AI 3·5·7명과 전투할 수 있고, 멀티에서는 Steam을 통해 다른 플레이어와 한 판을 구성합니다. 전체 기획과 개발을 혼자 담당했습니다.</p></div>
+          </div>
+          <nav class="project-links" aria-label="Elevator 관련 링크"><a href="https://github.com/shin-seong-yuk/Elevator" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></nav>
+        </div>
+      </article>
+      <article class="project about" id="about">
+        <div class="project-index">ABOUT ME</div>
+        <div class="project-main"><p class="eyebrow">GAME DEVELOPMENT PROGRAMMER</p><h2>문제를 끝까지 파고들고,<br>직접 구현해 답을 찾습니다.</h2><p class="project-lead">궁금한 것은 직접 만들어보며 배웁니다. 게임을 기획하고 구현해 실제 사용자에게 내놓은 뒤, 예상과 다른 반응을 다음 개선의 출발점으로 삼습니다.</p>
+          <p class="about-story">첫 게임을 배포했을 때 튜토리얼이 없어 플레이어가 시작부터 헤매는 모습을 보았습니다. 그때 제가 아는 것을 사용자도 당연히 알 것이라 생각했다는 점을 깨달았습니다. 이후에는 기능이 에디터에서 동작하는 것만으로 완성이라 여기지 않습니다. MeFense의 WebGL 문제를 끝까지 추적하고 실제 배포 화면을 반복 확인한 것도 같은 이유입니다.</p>
+          <div class="project-grid about-strengths"><div><h3>원인을 좁혀 해결합니다</h3><p>문제가 생기면 막연히 더 노력하기보다 로그와 실행 환경을 확인해 원인을 나눕니다. 수정 후에는 실제 사용자 환경에서 다시 검증합니다.</p></div><div><h3>상대가 이해할 수 있게 전달합니다</h3><p>수학 강사로 일하며 학생마다 막히는 지점을 찾아 수식·그림·예시로 설명했습니다. 개발 협업에서도 추상적인 말을 프로토타입과 화면으로 바꿔 공통 이해를 만듭니다.</p></div><div><h3>직접 만들며 배웁니다</h3><p>개인 게임의 기획·개발·배포를 경험했고, 팀 프로젝트에서는 서로 다른 관점을 구현 가능한 규칙과 흐름으로 연결해 왔습니다.</p></div><div><h3>AI를 작업에 맞게 활용합니다</h3><p>게임의 코드 작성과 구조 설계 과정에서 AI를 보조 도구로 사용합니다. Elevator의 모델 제작에도 활용했고, MeFense에서는 AI로 만든 텍스처 아이콘을 적용해 웹 환경의 UI 표현을 통일했습니다.</p></div></div>
+          <section class="about-details" aria-labelledby="profile-details-title">
+            <h3 id="profile-details-title">프로필 · 연락처</h3>
+            <dl class="profile-facts">
+              <div><dt>이름</dt><dd>신성욱 <span>Seong Uk Shin</span></dd></div>
+              <div><dt>E-mail</dt><dd><a href="mailto:sob509sswssw@naver.com">sob509sswssw@naver.com</a></dd></div>
+              <div><dt>Tel</dt><dd><a href="tel:+821073886954">010-7388-6954</a></dd></div>
+            </dl>
+            <div class="about-history">
+              <section aria-labelledby="education-title">
+                <h3 id="education-title">학력 · 장학</h3>
+                <ul>
+                  <li><strong>용수초등학교</strong><span>2008.03 ~ 2014.02</span></li>
+                  <li><strong>화명중학교</strong><span>2014.03 ~ 2017.02</span></li>
+                  <li><strong>금곡고등학교</strong><span>2017.03 ~ 2020.02</span></li>
+                  <li><strong>부산대학교 정보컴퓨터공학과</strong><span>2023.03 ~ 현재</span></li>
+                  <li><strong>입학 성적 우수 장학생 선정</strong><span>4년 전액 장학</span></li>
+                </ul>
+              </section>
+              <section aria-labelledby="activities-title">
+                <h3 id="activities-title">활동</h3>
+                <ul>
+                  <li><strong>APPTIVE · 게임 팀</strong><span>부산대학교 앱 개발 동아리</span><time datetime="2026-02">2026.02</time> ~ 현재</li>
+                  <li><strong>Keeper</strong><span>부산대학교 정보 보안 동아리</span><time datetime="2025-02">2025.02</time> ~ <time datetime="2026-02">2026.02</time></li>
+                </ul>
+              </section>
+            </div>
+          </section>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer><span>© 2026 SHIN SEONG UK</span><a href="#top">BACK TO TOP ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* The combat scene is layered independently from the portfolio content. */
+.range-section {background:transparent;color:var(--ink);padding-top:32px}
+.range-heading .eyebrow {color:#dcaa6c}
+.range-heading h2 {font-size:clamp(32px,4vw,54px);letter-spacing:-.04em}
+.range-heading>p {color:#8eaaa9}
+.range-toolbar,.range-footer {max-width:1400px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;font:11px/1.5 monospace}
+.range-toolbar {background:#15252b;border:1px solid #31464d;padding:15px 20px;color:#c3d4cd}
+.range-toolbar>div {display:flex;align-items:center;gap:22px}
+.range-toolbar small {color:#59716f}
+.range-toolbar label {font:12px sans-serif;display:flex;align-items:center;gap:6px;cursor:pointer}
+.range-toolbar input {accent-color:#dfb77a}
+.range-toolbar button {border:1px solid #45605f;border-radius:3px;background:#203238;color:#dfdfce;padding:7px 12px;font-size:11px;cursor:pointer}
+.live-dot {display:inline-block;background:#b8dc93;width:6px;height:6px;margin-right:10px;border-radius:50%;box-shadow:0 0 8px #b8dc93}
+.range {width:100%;height:auto;aspect-ratio:16/9;min-height:460px;border:1px solid #33494e;background:#0e2027;touch-action:pan-y;outline-offset:4px}
+.range-world {position:absolute;inset:0;background:url('assets/range-scene.svg') center/100% 100%}
+.range-atmosphere {position:absolute;z-index:5;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 40%,transparent 28%,#010c1266 100%);box-shadow:inset 0 0 80px #020a0a80}
+/* Equip accents are drawn at the weapon tip in 3D, rather than over the HUD. */
+.equip-swoosh {display:none}
+.range-hud {inset:26px 28px auto;color:#bcd1ca;line-height:1.7;pointer-events:none}
+.range-hud b {font-size:11px;letter-spacing:.25em;font-weight:400}
+.range-hud small {display:block;font-size:8px;letter-spacing:.14em;opacity:.5}
+.hud-right {text-align:right}
+.target {width:18%;height:57%;bottom:15%;filter:drop-shadow(0 10px 8px #0003);transform-origin:50% 86%;transition:filter .15s}
+/* Lamp centers in range-scene.svg: 410, 700, 990 on a 1400-wide scene. */
+.target-one {left:20.285714%}.target-two {left:41%}.target-three {right:20.285714%}
+.dummy {display:block;width:100%;height:calc(100% - 46px);background:url('assets/dummy.svg') center bottom/contain no-repeat}
+.target-label {display:block;color:#dfebe3;background:#102429db;border:1px solid #64878466;border-top:2px solid #9ba67c;padding:7px 3px;max-width:190px;margin:-5px auto 0;box-shadow:0 5px 14px #0004}
+.target-label small {font:8px/1.4 monospace;letter-spacing:.1em;color:#a6c0b3;display:block}
+.target-label strong {font-size:clamp(12px,1.6vw,21px);letter-spacing:.015em}
+.target:hover .target-label,.target:focus-visible .target-label {border-color:#e9c288;color:#ffe1b6;background:#28322de8}
+.target:focus-visible {outline:2px solid #f2ce9a;outline-offset:5px}
+.target.is-hit {animation:dummy-impact .55s ease-out}
+#combat-canvas {position:absolute;inset:0;width:100%;height:100%;z-index:6;pointer-events:none}
+.crosshair {width:22px;height:22px;border:0;border-radius:0;filter:drop-shadow(0 1px 2px #000);z-index:10}
+.crosshair:before {width:22px;left:0;top:10px;height:1px;background:linear-gradient(90deg,#e5f2df 0 30%,transparent 30% 70%,#e5f2df 70%)}
+.crosshair:after {height:22px;top:0;left:10px;width:1px;background:linear-gradient(#e5f2df 0 30%,transparent 30% 70%,#e5f2df 70%)}
+.crosshair i {width:2px;height:2px;left:10px;top:10px;background:#fff}
+.range[data-weapon="staff"] .crosshair {border:1px solid #ffb96c;border-radius:50%;width:30px;height:30px}
+.range[data-weapon="staff"] .crosshair:before,.range[data-weapon="staff"] .crosshair:after,.range[data-weapon="staff"] .crosshair i {display:none}
+.crosshair.confirmed {transform:translate(-50%,-50%) rotate(45deg);filter:drop-shadow(0 0 5px #ffba6b)}
+.range-bottom {position:absolute;inset:auto 26px 22px;display:flex;align-items:end;justify-content:space-between;pointer-events:none;z-index:8;text-shadow:0 2px 6px #000}
+.range-bottom small,.range-bottom strong,.range-bottom>div>span {display:block}
+.range-bottom small {font:9px monospace;letter-spacing:.16em;color:#a9b7ac}
+.range-bottom strong {font:700 19px/1.8 monospace;letter-spacing:.04em;color:#e9ecdd}
+.range-bottom>div>span {font-size:10px;color:#d6b88a}
+.range-guide {position:static;transform:none;text-align:right;line-height:1.8;font-size:10px;letter-spacing:0;color:#c9d6d0}
+.range-guide span {color:#94a59e}
+.hit-notice {position:absolute;z-index:9;top:18%;left:50%;transform:translateX(-50%);font:11px monospace;letter-spacing:.12em;white-space:nowrap;color:#ffe2a7;text-shadow:0 0 12px #ffb050;pointer-events:none}
+.range-footer {padding:15px 2px;color:#788d8e;font:11px/1.5 sans-serif}
+.range-footer a {text-decoration:none;color:#d4ba8f}
+.weapon-icon svg {width:54px;height:40px;display:block;margin:auto;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.weapon-icon {color:#d6ba87}
+.weapon.is-selected {border-color:#d6ba87;box-shadow:inset 0 -3px #d6ba87;background:#25271e}
+.weapon {background:linear-gradient(145deg,#172025,#0d1216)}
+@keyframes dummy-impact {0%{transform:rotate(0)}15%{transform:rotate(-4deg) translateY(3px)}45%{transform:rotate(2.5deg)}75%{transform:rotate(-1deg)}100%{transform:rotate(0)}}
+@media(max-width:760px) {
+ .range-heading {display:block}.range-heading>p {margin-top:14px;text-align:left}
+ .range {min-height:380px;aspect-ratio:1.2}
+ .range-toolbar {padding:10px;flex-wrap:wrap;font-size:10px}
+ .range-toolbar>div {gap:14px}.range-toolbar label {font-size:11px}
+ .range-hud {inset:15px 14px auto}
+ .target {width:20%;height:49%;bottom:24%}
+ .target-one {left:19.285714%}.target-two {left:40%}.target-three {right:19.285714%}
+ .target-label small {font-size:6px;letter-spacing:0}.target-label strong {font-size:11px;white-space:nowrap}
+ .range-bottom {inset:auto 12px 15px}.range-bottom strong {font-size:13px}
+ .range-guide {font-size:9px}.range-bottom small {font-size:8px}
+ .hit-notice {top:20%;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce) {.target.is-hit {animation:none}}
+
+/* Real-time 3D stage. Project labels are projected from world-space anchors. */
+.range {aspect-ratio:16/9;min-height:460px;border-radius:0 0 6px 6px}
+#three-canvas {display:block;position:absolute;inset:0;width:100%;height:100%;z-index:1;cursor:none;touch-action:pan-y}
+.range[data-engine="three"] .range-world {display:none}
+.range[data-engine="fallback"] #three-canvas {display:none}
+.range-loading {position:absolute;inset:35% 12% auto;z-index:9;padding:20px;background:#102027ed;border:1px solid #6b8177;color:#dae2d1;text-align:center;font-size:13px;pointer-events:none}
+.range-loading[hidden] {display:none}
+.range-label {position:absolute;z-index:8;top:73%;width:clamp(90px,16%,170px);transform:translateX(-50%);padding:8px 5px;border:1px solid #657d75;border-top:2px solid #d3bd8b;border-radius:2px;background:#112328e8;color:#eff0dc;text-align:center;cursor:pointer;box-shadow:0 5px 12px #0004;transition:border-color .15s,background-color .15s}
+.range-label[data-target="0"] {left:14%}.range-label[data-target="1"] {left:32%}.range-label[data-target="2"] {left:50%}.range-label[data-target="3"] {left:68%}.range-label[data-target="4"] {left:86%}
+.range-label small {display:block;font:8px/1.5 monospace;letter-spacing:.08em;color:#b0c5b6}
+.range-label strong {display:block;font:600 clamp(11px,1.5vw,18px)/1.65 sans-serif}
+.range-label:hover,.range-label:focus-visible {background:#334036;border-color:#e1ce9c;outline-offset:4px}
+.range-bottom {z-index:7}.range-hud {z-index:7}
+.range-hud small {opacity:.8}
+.crosshair.on-target:before,.crosshair.on-target:after {filter:drop-shadow(0 0 3px #d8ff45)}
+.range.is-paused #three-canvas {cursor:default}
+.range.is-paused .crosshair,.range[data-engine="fallback"] .crosshair {display:none}
+.range-quickbar {max-width:1400px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px 14px;background:#101d23;border-inline:1px solid #31464d}
+.weapon-list {grid-template-columns:repeat(7,minmax(0,1fr))}
+#reset-props {order:2;margin-left:auto;flex:0 0 auto;border-color:#b99c66;color:#e2cfaa;padding-inline:18px}
+.range-quickbar .quickbar-note {order:3;flex-basis:100%;margin-left:0}
+.range-quickbar button {min-height:38px;border:1px solid #3b5055;padding:6px 14px;background:transparent;color:#768c8c;font:10px monospace;border-radius:3px;cursor:pointer}
+.range-quickbar button span {font:13px sans-serif;color:#c5d4c8;margin-left:6px}
+.range-quickbar button[aria-pressed="true"] {background:#34392b;border-color:#d0b77d;color:#d0b77d}
+.range-quickbar button[aria-pressed="true"] span {color:#f1dcaa}
+.quickbar-note {margin-left:auto;font-size:11px;color:#8fa7a0}
+.range-toolbar {border-radius:6px 6px 0 0;flex-wrap:wrap}
+.range-toolbar>div {gap:10px;flex-wrap:wrap}
+.range-toolbar button {min-height:36px}
+.range-footer {gap:16px;flex-wrap:wrap}
+.range-footer a {white-space:nowrap}
+.range-mobile-targets {display:none}
+@media(max-width:760px) {
+ .weapon-list {grid-template-columns:repeat(4,minmax(0,1fr))}
+ .range-quickbar button {min-width:65px}
+ .range {min-height:400px;aspect-ratio:1}
+ .range-label {width:clamp(58px,18%,82px);padding:5px 2px}
+ .range-label small {font-size:6px;letter-spacing:0}
+ .range-label strong {font-size:9px}
+ .range-quickbar {gap:5px;padding:8px}
+ .range-quickbar button {flex:1;padding:5px 2px;font-size:8px}
+ .range-quickbar button span {font-size:12px;margin-left:2px}
+ .quickbar-note {display:none}
+ .range-toolbar>div {gap:8px}
+ .range-toolbar button {padding:6px 8px}
+ .range-hud b {font-size:9px}
+ .range-bottom {bottom:14px}
+ .range-guide {max-width:120px;white-space:normal}
+ .range-loading {inset:28% 8% auto}
+ .range-mobile-targets {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:18px auto 0}
+ .range-mobile-targets p {grid-column:1/-1;margin:0 0 2px;color:#a9bdbb;font-size:12px}
+ .range-mobile-targets a {display:flex;align-items:center;gap:7px;min-width:0;min-height:48px;padding:10px 12px;border:1px solid #3f595a;color:#d9e8df;text-decoration:none;font:11px/1.35 monospace}
+ .range-mobile-targets a strong {min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#f4f2e6;font:600 13px/1.2 sans-serif}
+ .range-mobile-targets a:last-child {grid-column:1/-1}
+ .range-mobile-targets a:hover,.range-mobile-targets a:focus-visible {border-color:#d3bd8b;background:#21332f}
+}

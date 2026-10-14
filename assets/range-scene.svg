@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" preserveAspectRatio="none">
+<defs>
+ <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#172e35"/><stop offset="1" stop-color="#32464a"/></linearGradient>
+ <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#3e5555"/><stop offset="1" stop-color="#111d23"/></linearGradient>
+ <linearGradient id="side"><stop stop-color="#081319"/><stop offset="1" stop-color="#263b40"/></linearGradient>
+ <linearGradient id="beam" x2="0" y2="1"><stop stop-color="#aef2e7" stop-opacity=".16"/><stop offset="1" stop-color="#aef2e7" stop-opacity="0"/></linearGradient>
+ <radialGradient id="light"><stop stop-color="#92d9cf" stop-opacity=".23"/><stop offset="1" stop-color="#92d9cf" stop-opacity="0"/></radialGradient>
+ <pattern id="brick" width="130" height="44" patternUnits="userSpaceOnUse"><path d="M0 0H130V44H0ZM65 0V44" fill="none" stroke="#14292d" stroke-width="1"/></pattern>
+ <pattern id="stripe" width="24" height="24" patternUnits="userSpaceOnUse" patternTransform="rotate(40)"><rect width="12" height="24" fill="#d2aa57"/></pattern>
+</defs>
+<rect width="1400" height="800" fill="#0d1c21"/>
+<path d="M0 0H1400L1150 170H250Z" fill="#122329"/>
+<path d="M250 170H1150V493H250Z" fill="url(#wall)"/>
+<path d="M250 170H1150V493H250Z" fill="url(#brick)" opacity=".65"/>
+<path d="M0 0L250 170V493L0 800Z" fill="url(#side)"/>
+<path d="M1400 0L1150 170V493L1400 800Z" fill="#16282f"/>
+<path d="M0 800L250 493H1150L1400 800Z" fill="url(#floor)"/>
+<g fill="none" stroke="#48615f" stroke-width="2" opacity=".38">
+ <path d="M700 360L-500 800M700 360L0 800M700 360L350 800M700 360L700 800M700 360L1050 800M700 360L1400 800M700 360L1900 800"/>
+ <path d="M242 506H1158M224 530H1176M195 568H1205M148 630H1252M72 728H1328"/>
+</g>
+<g fill="#0d1a21" stroke="#456062" stroke-width="2">
+ <path d="M60 0H88L299 170H279Z"/><path d="M1312 0H1340L1121 170H1101Z"/>
+ <path d="M200 0H225L380 170H362Z"/><path d="M1175 0H1200L1038 170H1020Z"/>
+ <path d="M0 87L250 230V263L0 148Z"/><path d="M1400 87L1150 230V263L1400 148Z"/>
+ <path d="M0 330L250 360V391L0 390Z"/><path d="M1400 330L1150 360V391L1400 390Z"/>
+ <rect x="247" y="168" width="24" height="330"/><rect x="1129" y="168" width="24" height="330"/>
+</g>
+<g fill="#112329" stroke="#45605f" stroke-width="2">
+ <rect x="300" y="222" width="220" height="241"/><rect x="590" y="222" width="220" height="241"/><rect x="880" y="222" width="220" height="241"/>
+</g>
+<g stroke="#9ed8cb" stroke-width="3" opacity=".25"><path d="M310 265H510M600 265H800M890 265H1090M310 320H510M600 320H800M890 320H1090M310 375H510M600 375H800M890 375H1090M310 430H510M600 430H800M890 430H1090"/></g>
+<g fill="#acd7cc" font-family="monospace" text-anchor="middle" opacity=".5"><text x="410" y="210" font-size="16">LANE 01</text><text x="700" y="210" font-size="16">LANE 02</text><text x="990" y="210" font-size="16">LANE 03</text><text x="700" y="125" letter-spacing="12" font-size="28">PROVING GROUND</text></g>
+<g fill="url(#beam)"><path d="M337 170H480L570 630H250Z"/><path d="M627 170H772L860 630H540Z"/><path d="M917 170H1060L1150 630H830Z"/></g>
+<ellipse cx="700" cy="330" rx="650" ry="340" fill="url(#light)"/>
+<g stroke="#91dacc" stroke-width="5"><path d="M333 173H487M623 173H777M913 173H1067"/></g>
+<g stroke="#d5eee6" stroke-width="2"><path d="M333 173H487M623 173H777M913 173H1067"/></g>
+<path d="M0 745L231 475M1400 745L1169 475" stroke="#f2bb64" opacity=".6" stroke-width="5"/>
+<path d="M0 780H1400V800H0Z" fill="url(#stripe)" opacity=".45"/>
+<g fill="#293d42" stroke="#52605c"><path d="M20 530L122 515V587L20 633Z"/><path d="M20 530L55 509L149 499L122 515Z" fill="#51615d"/><path d="M122 515L149 499V570L122 587Z" fill="#0e2026"/><path d="M1252 558L1370 610V518L1252 493Z"/><path d="M1252 493L1280 478L1396 506L1370 518Z" fill="#51615d"/></g>
+<path d="M0 0H1400V800H0Z" fill="none" stroke="#060d11" stroke-width="24"/>
+</svg>

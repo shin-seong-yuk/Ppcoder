@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 310">
+<defs>
+ <linearGradient id="cloth"><stop stop-color="#67573d"/><stop offset=".4" stop-color="#c2a77c"/><stop offset=".72" stop-color="#a48a63"/><stop offset="1" stop-color="#544735"/></linearGradient>
+ <linearGradient id="steel"><stop stop-color="#182326"/><stop offset=".4" stop-color="#61706a"/><stop offset=".6" stop-color="#364743"/><stop offset="1" stop-color="#162328"/></linearGradient>
+ <pattern id="weave" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1H5M1 0V5" stroke="#312c21" opacity=".2" stroke-width=".7"/></pattern>
+</defs>
+<ellipse cx="103" cy="296" rx="70" ry="10" fill="#030a0d" opacity=".45"/>
+<path d="M94 167H107V281L137 294H118L101 286L81 297H61L94 279Z" fill="url(#steel)" stroke="#6f7870" stroke-width="1"/>
+<path d="M29 106L36 89L77 91L84 83H120L130 91L170 88L180 105L169 123L129 117L133 193Q101 211 66 193L70 118L34 125Z" fill="url(#cloth)" stroke="#413f30" stroke-width="3"/>
+<path d="M76 83Q62 63 74 41Q96 26 119 41Q134 61 121 83L110 94H87Z" fill="url(#cloth)" stroke="#423d2d" stroke-width="3"/>
+<path d="M29 106L36 89L77 91L84 83H120L130 91L170 88L180 105L169 123L129 117L133 193Q101 211 66 193L70 118L34 125Z" fill="url(#weave)"/>
+<path d="M76 83Q62 63 74 41Q96 26 119 41Q134 61 121 83L110 94H87Z" fill="url(#weave)"/>
+<path d="M82 57L91 66M91 57L82 66M108 57L117 66M117 57L108 66" stroke="#282d28" stroke-width="3"/>
+<path d="M88 78Q100 84 114 77" stroke="#514333" stroke-width="2" fill="none"/>
+<path d="M66 181L133 180M72 124L75 94M128 124L125 94M102 100V196" stroke="#574b36" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M79 91Q100 97 121 91M66 185L133 184" stroke="#ded0a0" stroke-width="4" fill="none"/>
+<circle cx="100" cy="140" r="26" fill="#263836" stroke="#dac897" stroke-width="2"/>
+<circle cx="100" cy="140" r="18" fill="none" stroke="#cd8150" stroke-width="3"/>
+<circle cx="100" cy="140" r="7" fill="#e08d50"/>
+<path d="M96 39L94 27M107 38L113 26M34 94L20 90M34 101L19 103M174 93L186 85M174 101L191 99" stroke="#d0b77e" stroke-width="2"/>
+</svg>

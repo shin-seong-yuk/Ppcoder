@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720">
+  <title>프로젝트 이미지 자리</title>
+  <desc>본인 프로젝트의 화면이나 결과 이미지로 교체할 빈 자리</desc>
+  <rect width="960" height="720" fill="#f1f2ef"/>
+  <g text-anchor="middle" font-family="Malgun Gothic, Apple SD Gothic Neo, sans-serif">
+    <text x="480" y="347" fill="#454e47" font-size="32">프로젝트 화면</text>
+    <text x="480" y="397" fill="#636963" font-size="21">완성한 화면이나 실행 장면을 넣어주세요</text>
+  </g>
+</svg>
